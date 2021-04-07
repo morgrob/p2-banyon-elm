@@ -324,7 +324,7 @@ header {
     color: white;
     font-size: 1.8em;
     margin-left: 96.5vw;
-    margin-top: 4.5px;
+    margin-top: 3px;
   }
 
 /* --------------------------------------------------- SECTION BAR ---------------------------------------------------*/
@@ -426,7 +426,6 @@ h2 i {
 }
 .text {
   margin: 10px 0px;
-  font-family: 'Playfair Display', serif;
   font-size: 1.2em;
 }
 .story-1 {
@@ -540,50 +539,369 @@ footer {
 /* --------------------------------------------------- MEDIA QUERIES ---------------------------------------------------*/
 
 @media (max-width: 1400px) and (min-width: 1020px) {
-    input[type="text"]:focus {
-        width: 200px;
-    }
-    .caption {
-      top: 40%;
-    }
-    .section-dropdown a {
-      padding-left: 1.45vw;
-      padding-right: 1.45vw;
-    }
-    .topics {
-      height: 5vh;
-    }
-    .background {
-      height: 94.3vh;
-    }
+  .background {
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    height: 93vh;
+    width: 100.2vw;
+    margin-left: -10px;
+  }
+.caption i {
+    padding-right: 15px;
+  }
+.caption {
+    position: absolute;
+    top: 35%;
+    width: 90vw;
+    margin-left: 40px;
+    text-align: left;
+    color: white;
+  }
+h1 {
+    font-size: 2.8em;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
-@media (max-width: 1019px) and (min-width: 500px) {
-    .topics {
-      height: 10.5vh;
-    }
-    #wrap {
-      display: none;
-    }
-    #logo {
-      margin-left: 80vw;
-    }
-    .caption {
-      top: 25%;
-    }
+
+#info {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  width: 75vw;
+  margin-top: 30px;
 }
-@media (max-width: 499px) {
-  #logo {
-    margin-left: 62vw;
+.section-d li {
+  padding-left: 1.6vw;
+  padding-right: 1.6vw;
+  padding-top: 2.1vh;
+}
+#read {
+  height: 50px;
+  width: 200px;
+}
+#account {
+  margin-left: 95vw;
+}
+#wrap {
+  margin-left: 92vw;
+}
+.story-container {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.title {
+  font-size: 0.8em;
+}
+.icon2 {
+  margin-left: 15px;
+}
+.title i {
+  padding-right: 10px;
+}
+.footer a {
+  padding: 5px 75px;
+}
+h2 {
+  margin-right: 5vw;
+}
+}
+@media (max-width: 1019px) and (min-width: 600px) {
+  .caption i {
+    padding-right: 15px;
+  }
+.caption {
+    position: absolute;
+    top: 35%;
+    width: 90vw;
+    margin-left: 40px;
+    text-align: left;
+    color: white;
+  }
+h1 {
+    font-size: 2.8em;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#info {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  width: 90vw;
+  margin-top: 30px;
+}
+.section-d li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2.1vh;
+}
+#read {
+  height: 50px;
+  width: 200px;
+}
+#account {
+  margin-left: 95vw;
+}
+#wrap {
+  margin-left: 92vw;
+}
+.story-container {
+  width: 92vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+}
+h2 {
+  margin-left: 4vw;
+}
+.title {
+  font-size: 0.8em;
+}
+.icon2 {
+  margin-left: 15px;
+}
+.title i {
+  padding-right: 10px;
+}
+.footer a {
+  padding: 5px 50px;
+  font-size: 0.9em;
+}
+.legal-info a {
+  font-size: 0.8em;
+}
+.logo {
+  margin-left: 42vw;
+}
+.topics {
+  height: 10vh;
+}
+.story-1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.story-2 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+.story-3 {
+  grid-column: 5/7;
+  grid-row: 1/3;
+}
+.story-5 {
+  grid-column: 1/7;
+  grid-row: 3/7;
+}
+.story-4 {
+  grid-column: 1/3;
+  grid-row: 7/9;
+}
+.story-8 {
+  grid-column: 3/5;
+  grid-row: 7/9;
+}
+.story-7 {
+  grid-column: 5/7;
+  grid-row: 7/9;
+}
+.story-6 {
+  grid-column: 1/7;
+  grid-row: 9/13;
+}
+.story-9 {
+  grid-column: 1/3;
+  grid-row: 13/15;
+}
+.story-10 {
+  grid-column: 3/5;
+  grid-row: 13/15;
+}
+.story-11 {
+  grid-column: 5/7;
+  grid-row: 13/15;
+}
+.story-15 {
+  grid-column: 1/7;
+  grid-row: 15/19;
+}
+.story-13 {
+  grid-column: 1/3;
+  grid-row: 19/21;
+}
+.story-14 {
+  grid-column: 3/5;
+  grid-row: 19/21;
+}
+.story-12 {
+  grid-column: 5/7;
+  grid-row: 19/21;
+}
+}
+@media (max-width: 599px) {
+  #account {
+    visibility: hidden;
   }
   #wrap {
-    display: none;
+    visibility: hidden;
   }
-  .caption {
-    width: 90vw;
+  .caption i {
+    padding-right: 15px;
+  }
+.caption {
+    position: absolute;
+    top: 38%;
+    width: 95vw;
     margin-left: 20px;
-    font-size: 0.75em;
+    text-align: left;
+    color: white;
   }
-  .topics {
-    height: 15.5vh;
+  header {
+    justify-content: flex-end;
   }
+  header a {
+    margin-right: 10px;
+  }
+h1 {
+    font-size: 2.1em;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#info {
+  font-size: 0.9em;
+  line-height: 1.7em;
+  width: 95vw;
+  margin-top: 30px;
+}
+#head-info {
+  font-size: 0.9em;
+}
+.section-d li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2.1vh;
+}
+#read {
+  height: 45px;
+  width: 180px;
+  font-size: 0.9em;
+}
+#account {
+  margin-left: 95vw;
+}
+#wrap {
+  margin-left: 92vw;
+}
+.story-container {
+  width: 92vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(36, 120px);
+}
+h2 {
+  margin-left: 2vw;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.title h2 {
+font-size: 1.6em;
+}
+.title {
+  font-size: 0.8em;
+}
+.icon2 {
+  margin-left: 15px;
+}
+.title i {
+  padding-right: 10px;
+}
+.footer a {
+  padding: 5px 10px;
+  font-size: 0.7em;
+}
+.legal-info a {
+  font-size: 0.6em;
+}
+.logo {
+  margin-left: 35vw;
+}
+.topics {
+  height: 15vh;
+}
+.text {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+.story-1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.story-2 {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.story-3 {
+  grid-column: 1/2;
+  grid-row: 5/7;
+}
+.story-5 {
+  grid-column: 1/2;
+  grid-row: 7/11;
+}
+.story-4 {
+  grid-column: 1/2;
+  grid-row: 11/13;
+}
+
+
+.story-8 {
+  grid-column: 1/2;
+  grid-row: 13/15;
+}
+.story-7 {
+  grid-column: 1/2;
+  grid-row: 15/17;
+}
+.story-6 {
+  grid-column: 1/2;
+  grid-row: 17/21;
+}
+.story-9 {
+  grid-column: 1/2;
+  grid-row: 21/23;
+}
+.story-10 {
+  grid-column: 1/2;
+  grid-row: 23/25;
+}
+
+
+.story-11 {
+  grid-column: 1/2;
+  grid-row: 25/27;
+}
+.story-15 {
+  grid-column: 1/2;
+  grid-row: 27/31;
+}
+.story-13 {
+  grid-column: 1/2;
+  grid-row: 31/33;
+}
+.story-14 {
+  grid-column: 1/2;
+  grid-row: 33/35;
+}
+.story-12 {
+  grid-column: 1/2;
+  grid-row: 35/37;
+}
 }
