@@ -21,14 +21,14 @@ body {
 .caption {
     position: absolute;
     left: 0;
-    top: 58%;
-    width: 50vw;
+    top: 35%;
+    width: 45vw;
     margin-left: 65px;
     text-align: left;
     color: white;
   }
 #feat {
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: 0.5em;
     margin-bottom: 0;
 }
@@ -41,6 +41,7 @@ h1 {
 .caption p {
     font-size: 1.3em;
     line-height: 1.5em;
+    margin-top: 10px;
 }
 .caption i {
   padding-right: 35px;
@@ -56,9 +57,60 @@ h2 {
     font-size: 1.5em;
     font-weight: bold;
 }
-.watch {
-    display: flex;
-    flex-direction: row;
+#watch i {
+  padding-right: 12px;
+}
+#watch {
+display: inline-block;
+width: 180px;
+height: 45px;
+padding-top: 2px;
+margin-top: 10px;
+border-radius: 100px;
+border: 2px solid white;
+color: white;
+text-align: center;
+font-size: 1em;
+text-transform: uppercase;
+font-weight: bold;
+transition: all 0.3s;
+position: relative;
+overflow: hidden;
+background-color: transparent;
+z-index: 1;
+}
+#watch:focus {
+transform: scale(1.1);
+}
+#watch:after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: transparent;
+border-radius: 100px;
+z-index: -2;
+}
+#watch:before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0%;
+height: 100%;
+background-color: white;
+transition: all 0.3s;
+border-radius: 5px;
+z-index: -1;
+}
+#watch:hover {
+color: black;
+cursor: pointer;
+}
+#watch:hover:before {
+width: 100%;
 }
 
 /* --------------------------------------------------- HEADER/NAVIGATION ---------------------------------------------------*/
@@ -67,8 +119,19 @@ h2 {
     color: white !important;
     font-weight: bold;
 }
-#logo {
-  width: 90px;
+header, .logo {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2em;
+}
+header a {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+.logo {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
 }
 header {
     display: flex;
@@ -403,8 +466,8 @@ footer {
   padding-right: 15px;
 }
 .logo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin-left: 46vw;
 }
 .legal-info {
   display: flex;

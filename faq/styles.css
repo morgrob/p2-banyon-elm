@@ -286,10 +286,10 @@ h3 {
 }
 h3 a {
     text-decoration: underline;
-    color: blue;
+    color: lightskyblue;
 }
 h3 a:hover {
-    color: red;
+    color: white;
     cursor: pointer;
 }
 h3 a:visited {
