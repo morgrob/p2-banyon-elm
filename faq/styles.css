@@ -302,9 +302,6 @@ h3 a:hover {
     color: white;
     cursor: pointer;
 }
-h3 a:visited {
-    color: hotpink;
-}
 p a {
   color: lightskyblue;
 }
