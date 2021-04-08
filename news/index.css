@@ -57,6 +57,8 @@ h1 {
 #read i {
     padding-left: 25px;
 }
+
+/* This is a button animation that I've been using for a few months now on several projects. The animation essentially creates another styled button on top of the regular button that expands when hovered on to give the effect of the button changing colors from left to right.*/
 #read {
   display: inline-block;
   width: 220px;
@@ -144,6 +146,8 @@ header {
     z-index: 2;
     box-shadow: 0 8px 8px -8px black;
 }
+
+/* The link for where I found how to make this navigation menu is listed in the credits section of the site. To animate the hamburger icon into a cross, I made three separate bars with span classes in the html and used css animation to make the middle bar disappear and make the other two bars rotate to form an X. */
 #nav-container {
     position: fixed;
     top:0;
@@ -262,6 +266,7 @@ header {
 
 /* --------------------------------------------------- HEADER SEARCH BAR ---------------------------------------------------*/
 
+/* The link where I found how to make this search bar is listed in the credits section. It is essentially an image that expands a text input field with a white border bottom upon being clicked or 'focused' on.*/
 #wrap {
     margin: 8px 8px;
     position: fixed;
@@ -289,10 +294,6 @@ header {
     z-index: 3;
     transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     cursor: pointer;
-  }
-  
-  input[type="text"]:focus:hover {
-    border-bottom: 1px solid white;
   }
   
   input[type="text"]:focus {

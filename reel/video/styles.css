@@ -238,10 +238,6 @@ header {
     cursor: pointer;
   }
   
-  input[type="text"]:focus:hover {
-    border-bottom: 1px solid white;
-  }
-  
   input[type="text"]:focus {
     width: 300px;
     z-index: 1;
