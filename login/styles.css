@@ -6,14 +6,8 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
 }
-.name a {
-  color: white;
-  border: 1px solid white;
-  padding: 7.5px 15px;
-}
-.name {
-  font-family: 'Comfortaa', cursive;
-  font-size: 1.5em;
+.name img {
+  width: 60px;
 }
 /* --------------------------------------------------- HEADER/NAVIGATION ---------------------------------------------------*/
 .active {
@@ -329,7 +323,7 @@ header {
   h1 {
       font-size: 3.3em;
       padding-bottom: 20px;
-      margin-top: 20px;
+      margin-top: 5px;
   }
   .login-container {
       width: 49.5%;
@@ -484,7 +478,7 @@ footer {
   }
   .photo {
     width: 100vw;
-    height: 40vh;
+    height: 35vh;
     background-position: top;
   }
   .login-container {
@@ -503,13 +497,7 @@ footer {
     margin-left: 5%;
     margin-top: 0;
   }
-  .name a {
-    padding: 5px 10px;
-  }
-  .name {
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-  }
+
 #submit {
   margin-top: 0;
 }
