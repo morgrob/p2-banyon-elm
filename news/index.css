@@ -415,7 +415,7 @@ h2 i {
     transition: 0.3s ease-in-out;
 }
 .article:hover {
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 .title {
   position: absolute;
