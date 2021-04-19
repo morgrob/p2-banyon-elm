@@ -8,6 +8,17 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+#wrap {
+  display: inline-block;
+  position: relative;
+  height: 37px;
+  float: right;
+  padding: 0;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
 /* --------------------------------------------------- LANDING AREA ---------------------------------------------------*/
 
 .background {
@@ -126,32 +137,17 @@ a.active {
 .hide-me {
   opacity: 0;
 }
-header,
-.logo {
+
+a#home {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
   font-family: "Comfortaa", cursive;
-  font-size: 1.2em;
-}
-header a {
-  color: white;
-  border: 1px solid white;
-  padding: 5px 10px;
 }
 .logo {
   color: white;
   border: 1px solid white;
   padding: 5px 10px;
-}
-header {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  align-items: center;
-  width: 100vw;
-  height: 56px;
-  background-color: #151515;
-  z-index: 2;
-  box-shadow: 0 8px 8px -8px black;
 }
 
 /* The link for where I found how to make this navigation menu is listed in the credits section of the site. To 
@@ -162,12 +158,16 @@ header {
 #nav-container {
   position: fixed;
   top: 0;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-  margin-top: -6px;
-  margin-left: -10px;
-  z-index: 3;
+  padding: 0 15px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 56px;
+  background: black;
+  box-shadow: 0 8px 8px -8px black;
 }
 #nav-container .bg {
   position: absolute;
@@ -185,7 +185,6 @@ header {
   visibility: visible;
 }
 .button {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,10 +195,8 @@ header {
   border-radius: 0;
   height: 40px;
   width: 28px;
-  margin-top: 13px;
   cursor: pointer;
   pointer-events: auto;
-  margin-left: 30px;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -214,29 +211,31 @@ header {
   margin-top: 5px;
 }
 
-#nav-container:focus-within .button {
+#nav-content:focus-within .button {
   pointer-events: none;
 }
-#nav-container:focus-within .icon-bar:nth-of-type(1) {
+#nav-content:focus-within .icon-bar:nth-of-type(1),
+#nav-container .button:focus .icon-bar:nth-of-type(1) {
   transform: translate3d(0, 7px, 0) rotate(45deg);
 }
-#nav-container:focus-within .icon-bar:nth-of-type(2) {
+#nav-content:focus-within .icon-bar:nth-of-type(2),
+#nav-container .button:focus .icon-bar:nth-of-type(2) {
   opacity: 0;
 }
-#nav-container:focus-within .icon-bar:nth-of-type(3) {
+#nav-content:focus-within .icon-bar:nth-of-type(3),
+#nav-container .button:focus .icon-bar:nth-of-type(3) {
   transform: translate3d(0, -7px, 0) rotate(-45deg);
 }
 
 #nav-content {
-  margin-top: 62px;
   padding: 20px;
   padding-left: 30px;
   width: 90%;
   max-width: 300px;
   position: absolute;
-  top: 0;
+  top: 56px;
   left: 0;
-  height: calc(100% - 72px);
+  height: calc(100vh - 72px);
   background: #000;
   pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -266,12 +265,20 @@ header {
 #nav-content li a:hover {
   color: white;
 }
-#nav-container:focus-within #nav-content {
+
+#nav-container .button:focus + #nav-content,
+#nav-content:focus-within {
   transform: none;
 }
+
 ul {
   padding: 0;
   list-style: none;
+}
+
+#nav-utilities {
+  display: flex;
+  align-items: center;
 }
 
 /* --------------------------------------------------- HEADER SEARCH BAR ---------------------------------------------------*/
@@ -281,18 +288,8 @@ ul {
    * image that expands a text input field with a white border bottom upon being clicked or 'focused' on.
    */
 
-#wrap {
-  margin: 8px 8px;
-  position: fixed;
-  top: 0;
-  height: 55px;
-  padding: 0;
-  z-index: 6;
-  margin-left: 94vw;
-}
-
 input[type="text"] {
-  height: 30px;
+  height: 25px;
   font-size: 15px;
   display: inline-block;
   border: none;
@@ -320,7 +317,6 @@ input[type="submit"] {
   height: 25px;
   width: 25px;
   display: inline-block;
-  margin-top: 8px;
   background: url(../imgs/magnifier.svg) center center no-repeat;
   text-indent: -1000px;
   border: none;
@@ -336,12 +332,8 @@ input::placeholder {
   color: #656565;
 }
 #account {
-  z-index: 6;
-  position: fixed;
   color: white;
   font-size: 1.8em;
-  margin-left: 96.5vw;
-  margin-top: 11px;
 }
 
 /* --------------------------------------------------- SECTION BAR ---------------------------------------------------*/
@@ -590,12 +582,7 @@ footer {
     height: 50px;
     width: 200px;
   }
-  #account {
-    margin-left: 96vw;
-  }
-  #wrap {
-    margin-left: 94vw;
-  }
+
   .story-container {
     width: 90vw;
     margin-left: 5vw;
@@ -648,13 +635,7 @@ footer {
     height: 50px;
     width: 200px;
   }
-  #account {
-    margin-left: 94.5vw;
-    margin-right: 0;
-  }
-  #wrap {
-    margin-left: 91.5vw;
-  }
+
   .story-container {
     width: 92vw;
     margin-left: 4vw;
@@ -749,11 +730,14 @@ footer {
   }
 }
 @media (max-width: 599px) {
+  #nav-utilities {
+    display: none;
+  }
   #account {
     visibility: hidden;
   }
   #wrap {
-    visibility: hidden;
+    display: none;
   }
   .caption i {
     padding-right: 15px;
@@ -766,12 +750,7 @@ footer {
     text-align: left;
     color: white;
   }
-  header {
-    justify-content: flex-end;
-  }
-  header a {
-    margin-right: 10px;
-  }
+
   h1.playfair {
     font-size: 2.1em;
     font-family: "Playfair Display", serif;
@@ -797,9 +776,6 @@ footer {
     height: 45px;
     width: 180px;
     font-size: 0.9em;
-  }
-  #account {
-    margin-left: 95vw;
   }
 
   .story-container {

@@ -21,9 +21,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/credits.css" />
   </head>
   <body>
-    <header><a href="../index.html">Banyon Elm</a></header>
-    <div id="nav-container">
-      <div class="bg"></div>
+    <header id="nav-container">
       <div class="button" tabindex="0">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -32,46 +30,45 @@
       <div id="nav-content" tabindex="0">
         <ul>
           <li>
-            <a href="../index.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="../"><i class="fas fa-newspaper"></i> News</a>
           </li>
           <li>
-            <a href="../reel/index.html"><i class="fas fa-video"></i> Videos</a>
+            <a href="../reel/"><i class="fas fa-video"></i> Videos</a>
           </li>
           <li>
-            <a href="../faq/index.html"
-              ><i class="fas fa-question-circle"></i> FAQ</a
-            >
+            <a href="../faq/"><i class="fas fa-question-circle"></i> FAQ</a>
           </li>
           <li>
-            <a class="active" href="../credits/index.html"
+            <a href="../credits/" class="active"
               ><i class="fas fa-ellipsis-h"></i> Credits</a
             >
           </li>
           <li class="hide-me">
-            <a href="../login/index.html"
+            <a href="../login/"
               ><i class="fas fa-user-circle"></i> My Account</a
             >
           </li>
         </ul>
       </div>
-    </div>
+      <a id="home" href="../">Banyon Elm</a>
+      <div id="nav-utilities">
+        <div id="wrap">
+          <form action="" autocomplete="on">
+            <input
+              id="search"
+              name="search"
+              type="text"
+              placeholder="Search..."
+            />
+            <input id="search_submit" type="submit" />
+          </form>
+        </div>
 
-    <div id="wrap">
-      <form action="" autocomplete="on">
-        <input
-          class="input"
-          id="search"
-          name="search"
-          type="text"
-          placeholder="Search..."
-        />
-        <input class="input" id="search_submit" type="submit" />
-      </form>
-    </div>
-
-    <a href="../login/index.html"
-      ><h4 id="account"><i class="fas fa-user-circle"></i></h4
-    ></a>
+        <a href="../login/">
+          <i id="account" class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </header>
 
     <main>
       <h1>Credits</h1>
